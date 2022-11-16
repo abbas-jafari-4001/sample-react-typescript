@@ -27,18 +27,18 @@ export default function SingleImage() {
     return (
         <div className="flex justify-center items-center min-h-screen">
             <div className="max-w-3xl w-full border shadow-2xl shadow-blue-500">
-                <div className="flex items-start">
+                <div className="flex flex-col md:flex-row items-start">
                     {status === "success" ? (
                         <img
                             src={image?.webformatURL}
                             alt={image?.tags}
-                            className="w-96 min-h-[18rem]"
+                            className="w-full md:w-96 min-h-[18rem]"
                         />
                     ) : (
                         <div className="shimmer w-96 h-72"></div>
                     )}
 
-                    <div className="py-8 px-10 text-xl flex flex-col gap-y-4 ">
+                    <div className="py-8 px-5 md:px-10 text-xl flex flex-col gap-y-4 ">
                         <p>
                             <span className="font-bold">User</span>:{" "}
                             {image?.user}
