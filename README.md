@@ -1,5 +1,5 @@
 # Sample code with Create React App
-** Demo: [https://sample-react-typescript.vercel.app/](https://sample-react-typescript.vercel.app/)
+**Demo: [https://sample-react-typescript.vercel.app/](https://sample-react-typescript.vercel.app/)**
 
 The library used in this project
 - [Tailwindcss](https://tailwindcss.com/)       -- styles
