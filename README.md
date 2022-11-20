@@ -7,7 +7,7 @@ The library used in this project
 - [Axios](https://axios-http.com/docs/intro)             -- connecting to API
 - [React Query](https://tanstack.com/query/v3/)       -- Caching data API
 - [React Router Dom](https://reactrouter.com/en/main)  -- navigation
-- [PWA] (https://web.dev/learn/pwa/)                   -- Progressive Web Apps
+- [PWA](https://web.dev/learn/pwa/)                   -- Progressive Web Apps
 
 
 
