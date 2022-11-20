@@ -8,10 +8,10 @@ export default function Home() {
 
     return (
         <>
-            <div className="mt-2 md:mt-4 columns-2 md:columns-3 gap-4">
+            <div className="mt-2 md:mt-4 columns-2 md:columns-3 gap-4 ">
                 {status === "loading"
                     ? [1, 2, 3, 4, 5, 6].map((item, index) => (
-                          <div key={index} className="shimmer h-80 mb-4"></div>
+                          <div key={index} className="shimmer w-full h-80 mb-4"></div>
                       ))
                     : data.hits.map((image: any, index: number) => {
                           return <Card key={index} image={image} />;

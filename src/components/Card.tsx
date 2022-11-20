@@ -1,4 +1,4 @@
-
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 interface Card {
@@ -6,15 +6,27 @@ interface Card {
 }
 
 export default function Card({ image }: Card) {
+    const [loaded, setLoaded] = useState(false);
+    useEffect(() => {
+        image?.webformatURL &&
+            setTimeout(() => {
+                setLoaded(true);
+            }, 1000);
+    },[image?.webformatURL]);
     return (
         <div className="mb-4 border shadow-lg object-cover">
             <Link to={`/image/${image.id}`}>
                 <div className="flex flex-col items-start">
-                    <img
-                        src={image?.webformatURL}
-                        alt={image?.tags}
-                        className="w-full"
-                    />
+                    {loaded ? (
+                        <img
+                            src={image?.webformatURL}
+                            alt={image?.tags}
+                            className="w-full aspect-video duration-700"
+                        />
+                    ) : (
+                        <div className="shimmer w-full aspect-video" />
+                    )}
+
                     <div className="py-8 px-4 ">
                         <p>
                             <span className="font-bold">ID</span>: {image?.id}
