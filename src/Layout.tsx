@@ -30,7 +30,7 @@ export default function Layout() {
                             <input
                                 ref={searchRef}
                                 type="text"
-                                className="w-full px-4 py-1.5 font-normal focus-visible:outline-none rounded-md"
+                                className="w-full text-gray-900 px-4 py-1.5 font-normal focus-visible:outline-none rounded-md"
                                 placeholder="Search..."
                             />
                             <button
