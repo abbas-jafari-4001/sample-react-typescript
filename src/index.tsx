@@ -4,7 +4,7 @@ import { AppContext } from "./_context/AppContext";
 import QueryProvider from "./_queries/QueryProvider";
 import RoutesApp from "./_routes/RoutesApp";
 import "./_styles/index.css";
-// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 ReactDOM.createRoot(document.querySelector("#root") as HTMLElement).render(
     <React.StrictMode>
@@ -16,4 +16,4 @@ ReactDOM.createRoot(document.querySelector("#root") as HTMLElement).render(
     </React.StrictMode>,
 );
 
-// serviceWorkerRegistration.register();
+serviceWorkerRegistration.register();
