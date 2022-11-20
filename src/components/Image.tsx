@@ -26,38 +26,40 @@ export default function SingleImage() {
 
     return (
         <div className="flex justify-center items-center min-h-screen">
-            <div className="max-w-3xl w-full border shadow-2xl shadow-blue-500">
-                <div className="flex flex-col md:flex-row items-start">
+            <div className="sm:max-w-sm md:max-w-3xl w-full border shadow-2xl shadow-blue-500">
+                <div className="columns-1 md:columns-2">
                     {status === "success" ? (
                         <img
                             src={image?.webformatURL}
                             alt={image?.tags}
-                            className="w-full md:w-96 min-h-[18rem]"
+                            className="w-full min-h-[13rem] mb-4"
                         />
                     ) : (
-                        <div className="shimmer w-96 h-72"></div>
+                        <div className="shimmer w-full min-h-[13rem] mb-4"></div>
                     )}
 
-                    <div className="py-8 px-5 md:px-10 text-xl flex flex-col gap-y-4 ">
-                        <p>
-                            <span className="font-bold">User</span>:{" "}
-                            {image?.user}
-                        </p>
-                        <p>
-                            <span className="font-bold">Width</span>:{" "}
-                            {image?.webformatWidth}
-                        </p>
-                        <p>
-                            <span className="font-bold">Height</span>:{" "}
-                            {image?.webformatHeight}
-                        </p>
-                        <button
-                            type="button"
-                            onClick={saveFile}
-                            className="bg-gray-100 py-2 rounded-lg text-blue-600 hover:shadow-lg duration-300"
-                        >
-                            Download
-                        </button>
+                    <div className="py-3">
+                        <div className="text-base xl:text-lg min-h-[13rem] justify-center flex flex-col gap-y-4 px-4">
+                            <p>
+                                <span className="font-bold">User</span>:{" "}
+                                {image?.user}
+                            </p>
+                            <p>
+                                <span className="font-bold">Width</span>:{" "}
+                                {image?.webformatWidth}
+                            </p>
+                            <p>
+                                <span className="font-bold">Height</span>:{" "}
+                                {image?.webformatHeight}
+                            </p>
+                            <button
+                                type="button"
+                                onClick={saveFile}
+                                className="bg-gray-100 py-2 rounded-lg text-blue-600 hover:shadow-lg duration-300"
+                            >
+                                Download
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

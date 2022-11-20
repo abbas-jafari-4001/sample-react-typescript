@@ -15,6 +15,7 @@ export default function Layout() {
             }
         };
     }, []);
+
     const classesLink = "hover:text-blue-600 duration-300 block";
     return (
         <section className="relative flex items-start">
@@ -122,7 +123,7 @@ export default function Layout() {
                 </div>
             </nav>
             <button
-                className="md:hidden fixed bottom-5 right-5 px-3 py-2 bg-blue-600 rounded text-sm text-white shadow-md shadow-black/70"
+                className={`md:hidden fixed bottom-5 right-5 px-3 py-2 ${toggleMenu ? "bg-green-600" : "bg-blue-600"} rounded text-sm text-white shadow-md shadow-black/70 duration-500`}
                 onClick={() => {
                     setToggleMenu(!toggleMenu);
                 }}
