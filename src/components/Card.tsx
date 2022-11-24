@@ -14,7 +14,7 @@ export default function Card({ image }: Card) {
             }, 1000);
     },[image?.webformatURL]);
     return (
-        <div className="mb-4 border shadow-lg object-cover hover:scale-110 duration-300">
+        <div className="mb-4 border shadow-lg object-cover hover:scale-105 duration-300">
             <Link to={`/image/${image.id}`}>
                 <div className="flex flex-col items-start">
                     {loaded ? (
